@@ -1,0 +1,138 @@
+/* Reset & base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 60px;
+  }
+  
+  .container {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Input + Button */
+  input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: border 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(45deg, #4CAF50, #388E3C);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(45deg, #45a049, #2e7d32);
+  }
+  
+  /* Task List */
+  ul {
+    list-style: none;
+    margin-top: 20px;
+  }
+  
+  li {
+    background: #f7f7f7;
+    margin: 8px 0;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  li:hover {
+    background: #e0f2f1;
+    transform: scale(1.01);
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: #999;
+    background: #e0e0e0;
+    transition: all 0.3s;
+  }
+  
+  li button {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+  }
+  
+  li button:hover {
+    transform: scale(1.2);
+    color: #e53935;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 500px) {
+    .container {
+      padding: 20px;
+    }
+  
+    input[type="text"], button {
+      font-size: 14px;
+    }
+  
+    li {
+      font-size: 14px;
+    }
+  }
+  
